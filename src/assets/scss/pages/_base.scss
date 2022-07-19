@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-size: $ft-size;
+  line-height: 1.25;
+  text-align: center;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  background: $clr-bg;
+  font-family: "Plus Jakarta Sans", cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $clr-text;
+
+  h1 {
+    font-size: 2rem;
+    font-style: italic;
+    color: $clr-highlight;
+  }
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+@media screen and (min-width: $md-breakpoint) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: $lg-breakpoint) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: $xl-breakpoint) {
+  html {
+    font-size: 26px;
+  }
+}
