@@ -1,0 +1,31 @@
+@use "../../abstracts" as *;
+
+.loading_dots {
+  display: flex;
+  justify-content: center;
+}
+
+.loading_dots > div {
+  width: 16px;
+  height: 16px;
+  margin: 3px 6px;
+  border-radius: 50%;
+  background-color: $clr-highlight;
+  opacity: 1;
+  animation: loading_dots 0.6s infinite alternate;
+}
+
+@keyframes loading_dots {
+  to {
+    opacity: 0.1;
+    transform: translateY(-16px);
+  }
+}
+
+.loading_dots > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading_dots > div:nth-child(3) {
+  animation-delay: 0.4s;
+}

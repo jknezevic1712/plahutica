@@ -12,19 +12,29 @@ html {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  min-width: 100vw;
   font-size: $ft-size;
   line-height: 1.25;
   text-align: center;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+
+  h1 {
+    font-size: 2rem;
+    font-style: italic;
+    color: $clr-highlight;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+    color: $clr-highlight;
+  }
 }
 
 body {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  min-width: 100vw;
   display: flex;
   flex-wrap: wrap;
   background: $clr-bg;
@@ -32,35 +42,60 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $clr-text;
-
-  h1 {
-    font-size: 2rem;
-    font-style: italic;
-    color: $clr-highlight;
-  }
 }
 
 #root {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (min-width: $md-breakpoint) {
+@media screen and (min-width: $lg-breakpoint) {
   html {
     font-size: 16px;
   }
 }
 
-@media screen and (min-width: $lg-breakpoint) {
+@media screen and (min-width: $xl-breakpoint) {
   html {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
-@media screen and (min-width: $xl-breakpoint) {
+@media screen and (min-width: $xxl-breakpoint) {
   html {
     font-size: 26px;
+  }
+}
+
+/* UTILITY CLASSES */
+
+.link_as_button {
+  padding: 15px 10px;
+  background-color: $clr-bg;
+  width: 130px;
+  height: 50px;
+  border: 2px solid $clr-highlight;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $clr-highlight;
+    border: $clr-bg;
+    color: $clr-bg;
+  }
+}
+
+.hover {
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
   }
 }

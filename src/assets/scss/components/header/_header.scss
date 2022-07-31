@@ -1,0 +1,18 @@
+@use "../../abstracts" as *;
+
+.header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5%;
+  position: relative;
+  z-index: 2;
+
+  h1 {
+    font-family: "Edu QLD Beginner", cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}

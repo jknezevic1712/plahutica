@@ -1,0 +1,129 @@
+@use "../../../../abstracts" as *;
+
+.search_bar {
+  .search_bar-magnifier {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .search_bar-input_field {
+    opacity: 0;
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    width: 160px;
+    height: 35px;
+    display: flex;
+    transition: all 0.5s ease;
+
+    input {
+      width: 100%;
+      height: 100%;
+      border: 1px solid $clr-highlight;
+      border-radius: 5px;
+      padding-left: 5px;
+    }
+
+    &.show {
+      opacity: 1;
+      position: absolute;
+      width: 160px;
+      height: 35px;
+      display: flex;
+    }
+  }
+}
+
+@media screen and (min-width: $mobile_md-breakpoint) {
+  .search_bar {
+    .search_bar-input_field {
+      left: 55%;
+    }
+  }
+}
+
+@media screen and (min-width: $mobile_lg-breakpoint) {
+  .search_bar {
+    .search_bar-input_field {
+      left: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: $sm-breakpoint) {
+  .search_bar {
+    .search_bar-input_field {
+      top: 25%;
+      left: 70%;
+    }
+  }
+}
+
+@media screen and (min-width: $md-breakpoint) {
+  .search_bar {
+    .search_bar-input_field {
+      left: 77%;
+    }
+  }
+}
+
+@media screen and (min-width: $lg-breakpoint) {
+  .search_bar {
+    .search_bar-magnifier {
+      width: 30px;
+      height: 30px;
+    }
+
+    .search_bar-input_field {
+      width: 185px;
+      left: 82%;
+
+      &.show {
+        width: 185px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xl-breakpoint) {
+  .search_bar {
+    .search_bar-magnifier {
+      width: 40px;
+      height: 40px;
+    }
+
+    .search_bar-input_field {
+      width: 200px;
+      height: 40px;
+      top: 25%;
+      left: 83%;
+
+      &.show {
+        width: 200px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xxl-breakpoint) {
+  .search_bar {
+    .search_bar-magnifier {
+      width: 50px;
+      height: 50px;
+    }
+
+    .search_bar-input_field {
+      width: 250px;
+      height: 45px;
+      left: 83%;
+
+      &.show {
+        width: 250px;
+        height: 50px;
+      }
+    }
+  }
+}
