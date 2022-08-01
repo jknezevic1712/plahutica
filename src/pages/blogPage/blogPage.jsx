@@ -4,17 +4,13 @@ import Header from "../../components/header/header";
 import Banner from "./features/banner/banner";
 import BlogContent from "./features/blogContent/blogContent";
 
-const BlogPage = ({ currentBlogOverview, blogsNumber, imagesArray }) => {
+const BlogPage = ({ imagesArray }) => {
   return (
     <div className="blog_page">
       <div className="blog_page-container">
         <Header />
         <Banner />
-        <BlogContent
-          currentBlogOverview={currentBlogOverview}
-          blogsNumber={blogsNumber}
-          imagesArray={imagesArray}
-        />
+        <BlogContent imagesArray={imagesArray} />
       </div>
     </div>
   );

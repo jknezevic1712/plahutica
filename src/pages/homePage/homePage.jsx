@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 
 import Header from "../../components/header/header";
 import HomepageDetails from "./features/homepageDetails/homepageDetails";
 import HomepageTile from "./features/homepageTile/homepageTile";
 import HomepageScroll from "./features/homepageScroll/homepageScroll";
 
-const HomePage = ({
-  currentBlogOverview,
-  setCurrentBlogOverview,
-  blogsNumber,
-  imagesArray,
-}) => {
+const HomePage = ({ imagesArray }) => {
+  const activeBlogId = useSelector((state) => state.utils.activeBlogId);
+
   return (
     <div
       className="homepage"
       style={{
-        backgroundImage: `url(${imagesArray[currentBlogOverview]})`,
+        backgroundImage: `url(${imagesArray[activeBlogId]})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -23,17 +21,10 @@ const HomePage = ({
     >
       <Header />
       <div className="homepage-content">
-        <HomepageDetails currentBlogOverview={currentBlogOverview} />
+        <HomepageDetails activeBlogId={activeBlogId} />
         <div className="homepage-tiles">
-          <HomepageTile
-            currentBlogOverview={currentBlogOverview}
-            imagesArray={imagesArray}
-          />
-          <HomepageScroll
-            currentBlogOverview={currentBlogOverview}
-            setCurrentBlogOverview={setCurrentBlogOverview}
-            blogsNumber={blogsNumber}
-          />
+          <HomepageTile activeBlogId={activeBlogId} imagesArray={imagesArray} />
+          <HomepageScroll activeBlogId={activeBlogId} />
         </div>
       </div>
     </div>

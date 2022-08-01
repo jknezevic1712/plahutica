@@ -1,14 +1,23 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-import { blogs } from "../../../../assets/blogs/blogs";
-
-const BlogContent = ({ currentBlogOverview, blogsNumber, imagesArray }) => {
+const BlogContent = ({ imagesArray }) => {
+  const activeBlogId = useSelector((state) => state.utils.activeBlogId);
+  const activeBlogContent = useSelector(
+    (state) => state.blogs.data[activeBlogId].content
+  );
   let keyId = 0;
 
-  console.log("CURRENT BLOG => ", currentBlogOverview);
+  // console.log(
+  //   "ACTIVE BLOG ID => ",
+  //   activeBlogId,
+  //   ", BLOG DATA => ",
+  //   activeBlogContent
+  // );
+
   return (
     <div className="blog_container">
-      {Object.entries(blogs[currentBlogOverview]).map((data) => {
+      {Object.entries(activeBlogContent).map((data) => {
         keyId = keyId + 1;
 
         return (

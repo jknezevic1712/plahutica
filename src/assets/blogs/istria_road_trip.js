@@ -1,29 +1,11 @@
-export const blog_overviews = [
-  {
+export const istria_road_trip = {
+  overview: {
     title: "Istria road trip",
     description:
       "A picturesque blog describing road trip through Istria county in Croatia",
   },
-  {
-    title: "California, United States of America",
-    description: "Blog describing a journey through California!",
-  },
-  {
-    title: "Sarajevo, Bosnia and Herzegovina",
-    description: "Blog describing an excursion in Sarajevo!",
-  },
-  {
-    title: "Krk island in Croatia",
-    description: "Blog describing a summer vacation on Krk island in Croatia!",
-  },
-  {
-    title: "Rome, Italy",
-    description: "Blog describing a wonderful three-day excursion in Rome!",
-  },
-];
 
-export const blogs = [
-  {
+  content: {
     "Istra - mini road trip": `Ovog lipnja proveli smo pet dana u Istri, odnosno Puli i okolici. Na početku smo željeli obići puno više mjesta kao što su Brijuni, Vodnjan i park kažuna, ali bilo je toliko sparno vruće da smo se umorili samo putujući na plažu. Ako ništa drugo, bar smo obišli dosta plaža i uživali u suncu i moru, a detaljniji obilazak Istre ostavit ćemo za jesen ili proljeće kada će vrućine, a i gužve biti znatno manje. 
     Središte za obilazak bila nam je Pula i tamo smo zapravo proveli najviše vremena, a ostala mjesta posjetili smo na putu od i do Pule. Pulu smo doživjeli na malo drugačiji način jer smo većinom razgledavali predvečer ili noću, a uz to dogodile su nam se i brojne zanimljive i neobične situacije o kojima ćete saznati ako nastavite čitati ovaj blog. 
     `,
@@ -138,20 +120,4 @@ export const blogs = [
     Ručali smo u pizzeriji Rumore za koju mnogi kažu da nudi jednu od najboljih pizza u Hrvatskoj pa smo odlučili isprobati je li to uisitinu tako. Restoran ima veliku terasu s koje se pruža predivan pogled na Rabac i Kvarnerski zaljev. U ponudi imaju 12 vrsti pizza koje su pripremljene na autentičan napoletanski način. Osim pizza nude i burgere, salate i deserte, ali smo se mi ipak odlučili za pizzu. Odabrali smo pizzu napoletanu koja je bila 64 kune i pizzu tonninu koja je bila 67 kuna i malo nam je bolja tonnina. Iako su pizze malo skuplje, smatram da cijena opravdava kvalitetu jer su pizze zaista ukusne. Po prvi put sam uspjela sama pojesti pizzu što inače nikad nije slučaj jer me zasite brzo, ali ove pizze su lagane, a opet te taman zasite i osjećaš da si pojeo nešto svježe i kvalitetno. Osoblje je susretljivo i ljubazno.
     `,
   },
-  {
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium, perferendis aut velit, incidunt veritatis cupiditate aliquam nostrum iure accusamus assumenda provident voluptatum illum doloremque porro voluptatem id optio amet repellat dolores, ea quo? Nisi accusantium quisquam suscipit. Quidem, tenetur dolorum maiores amet sit blanditiis voluptatem corrupti natus incidunt nemo error ad fugit dolores provident id molestiae quasi consequatur cumque! Ratione quod, vero dolor recusandae laborum, laudantium dolores unde hic, quos facere odit saepe magnam animi accusantium corporis! Inventore vel odio ea atque adipisci explicabo a accusamus perspiciatis distinctio, officiis eum tempore quae sit aut labore consequuntur voluptatem delectus impedit, eligendi quam expedita amet odit quibusdam? Beatae fugiat aperiam a ullam voluptates provident dolores ipsum ex natus itaque iste impedit magnam veritatis necessitatibus minima voluptatibus fuga, debitis inventore est nihil ducimus laboriosam obcaecati error. Odit pariatur accusamus harum incidunt non nostrum veniam ullam possimus, laboriosam est id ex quas a at sunt, labore aspernatur modi commodi cumque officiis assumenda quisquam quis libero molestiae? Ab, cupiditate rerum iure tempora deserunt recusandae earum rem iusto fugiat, amet quam aliquam veniam molestias perferendis doloribus ex ut ad sequi animi tenetur dolore! Repudiandae, consequatur ipsum est omnis atque quidem aut odit laborum qui dignissimos.",
-  },
-  {
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium, perferendis aut velit, incidunt veritatis cupiditate aliquam nostrum iure accusamus assumenda provident voluptatum illum doloremque porro voluptatem id optio amet repellat dolores, ea quo? Nisi accusantium quisquam suscipit. Quidem, tenetur dolorum maiores amet sit blanditiis voluptatem corrupti natus incidunt nemo error ad fugit dolores provident id molestiae quasi consequatur cumque! Ratione quod, vero dolor recusandae laborum, laudantium dolores unde hic, quos facere odit saepe magnam animi accusantium corporis! Inventore vel odio ea atque adipisci explicabo a accusamus perspiciatis distinctio, officiis eum tempore quae sit aut labore consequuntur voluptatem delectus impedit, eligendi quam expedita amet odit quibusdam? Beatae fugiat aperiam a ullam voluptates provident dolores ipsum ex natus itaque iste impedit magnam veritatis necessitatibus minima voluptatibus fuga, debitis inventore est nihil ducimus laboriosam obcaecati error. Odit pariatur accusamus harum incidunt non nostrum veniam ullam possimus, laboriosam est id ex quas a at sunt, labore aspernatur modi commodi cumque officiis assumenda quisquam quis libero molestiae? Ab, cupiditate rerum iure tempora deserunt recusandae earum rem iusto fugiat, amet quam aliquam veniam molestias perferendis doloribus ex ut ad sequi animi tenetur dolore! Repudiandae, consequatur ipsum est omnis atque quidem aut odit laborum qui dignissimos.",
-  },
-  {
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium, perferendis aut velit, incidunt veritatis cupiditate aliquam nostrum iure accusamus assumenda provident voluptatum illum doloremque porro voluptatem id optio amet repellat dolores, ea quo? Nisi accusantium quisquam suscipit. Quidem, tenetur dolorum maiores amet sit blanditiis voluptatem corrupti natus incidunt nemo error ad fugit dolores provident id molestiae quasi consequatur cumque! Ratione quod, vero dolor recusandae laborum, laudantium dolores unde hic, quos facere odit saepe magnam animi accusantium corporis! Inventore vel odio ea atque adipisci explicabo a accusamus perspiciatis distinctio, officiis eum tempore quae sit aut labore consequuntur voluptatem delectus impedit, eligendi quam expedita amet odit quibusdam? Beatae fugiat aperiam a ullam voluptates provident dolores ipsum ex natus itaque iste impedit magnam veritatis necessitatibus minima voluptatibus fuga, debitis inventore est nihil ducimus laboriosam obcaecati error. Odit pariatur accusamus harum incidunt non nostrum veniam ullam possimus, laboriosam est id ex quas a at sunt, labore aspernatur modi commodi cumque officiis assumenda quisquam quis libero molestiae? Ab, cupiditate rerum iure tempora deserunt recusandae earum rem iusto fugiat, amet quam aliquam veniam molestias perferendis doloribus ex ut ad sequi animi tenetur dolore! Repudiandae, consequatur ipsum est omnis atque quidem aut odit laborum qui dignissimos.",
-  },
-  {
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium, perferendis aut velit, incidunt veritatis cupiditate aliquam nostrum iure accusamus assumenda provident voluptatum illum doloremque porro voluptatem id optio amet repellat dolores, ea quo? Nisi accusantium quisquam suscipit. Quidem, tenetur dolorum maiores amet sit blanditiis voluptatem corrupti natus incidunt nemo error ad fugit dolores provident id molestiae quasi consequatur cumque! Ratione quod, vero dolor recusandae laborum, laudantium dolores unde hic, quos facere odit saepe magnam animi accusantium corporis! Inventore vel odio ea atque adipisci explicabo a accusamus perspiciatis distinctio, officiis eum tempore quae sit aut labore consequuntur voluptatem delectus impedit, eligendi quam expedita amet odit quibusdam? Beatae fugiat aperiam a ullam voluptates provident dolores ipsum ex natus itaque iste impedit magnam veritatis necessitatibus minima voluptatibus fuga, debitis inventore est nihil ducimus laboriosam obcaecati error. Odit pariatur accusamus harum incidunt non nostrum veniam ullam possimus, laboriosam est id ex quas a at sunt, labore aspernatur modi commodi cumque officiis assumenda quisquam quis libero molestiae? Ab, cupiditate rerum iure tempora deserunt recusandae earum rem iusto fugiat, amet quam aliquam veniam molestias perferendis doloribus ex ut ad sequi animi tenetur dolore! Repudiandae, consequatur ipsum est omnis atque quidem aut odit laborum qui dignissimos.",
-  },
-];
+};

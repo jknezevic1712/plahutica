@@ -1,10 +1,10 @@
 import React from "react";
 
-const HomepageTile = ({ currentBlogOverview, imagesArray }) => {
+const HomepageTile = ({ activeBlogId, imagesArray }) => {
   return (
     <div className="homepage-blog_tile">
       <a href="/blog">
-        <img className="hover" src={imagesArray[currentBlogOverview]} alt="" />
+        <img className="hover" src={imagesArray[activeBlogId]} alt="" />
       </a>
     </div>
   );

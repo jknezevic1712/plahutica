@@ -1,24 +1,25 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+import { utilsUpdateActiveBlogId } from "../../../../redux/actions/utils/utilsActions";
 
 import BackIcon from "../../../../assets/images/back_icon_30.png";
 import NextIcon from "../../../../assets/images/next_icon_30.png";
 
-const HomepageScroll = ({
-  currentBlogOverview,
-  setCurrentBlogOverview,
-  blogsNumber,
-}) => {
-  console.log("CURR => ", currentBlogOverview, ", blogs => ", blogsNumber);
+const HomepageScroll = ({ activeBlogId }) => {
+  const dispatch = useDispatch();
+  const blogsNumber = useSelector((state) => state.blogs.data).length;
+
   const nextBlog = () => {
-    setCurrentBlogOverview(
-      currentBlogOverview === blogsNumber - 1 ? 0 : currentBlogOverview + 1
-    );
+    activeBlogId === blogsNumber - 1
+      ? dispatch(utilsUpdateActiveBlogId(0))
+      : dispatch(utilsUpdateActiveBlogId(activeBlogId + 1));
   };
 
   const prevBlog = () => {
-    setCurrentBlogOverview(
-      currentBlogOverview === 0 ? blogsNumber - 1 : currentBlogOverview - 1
-    );
+    activeBlogId === 0
+      ? dispatch(utilsUpdateActiveBlogId(blogsNumber - 1))
+      : dispatch(utilsUpdateActiveBlogId(activeBlogId - 1));
   };
 
   return (
