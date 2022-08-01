@@ -7,7 +7,6 @@ import {
 
 const initialState = {
   activeBlogId: 0,
-  loadInitialData: false,
 };
 
 const utilsReducer = createReducer(initialState, (builder) => {

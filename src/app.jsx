@@ -1,9 +1,6 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-
-import { blogsInitialDataLoad } from "./redux/actions/blogs/blogActions";
-import { utilsInitialDataLoad } from "./redux/actions/utils/utilsActions";
+import { useSelector } from "react-redux";
 
 import LoadingDots from "./components/loadingDots/loadingDots";
 
@@ -12,22 +9,15 @@ const BlogPage = lazy(() => import("./pages/blogPage/blogPage"));
 
 function App() {
   const activeBlogId = useSelector((state) => state.utils.activeBlogId);
-  const loadInitialData = useSelector((state) => state.utils.loadInitialData);
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (loadInitialData) {
-      dispatch(blogsInitialDataLoad());
-      dispatch(utilsInitialDataLoad());
-    }
-  }, [loadInitialData]);
+  console.log("ACTIVE BLOG => ", activeBlogId);
 
   return (
     <>
       <BrowserRouter>
         <Suspense fallback={<LoadingDots />}>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route path="/blog" element={<BlogPage />} />
           </Routes>
         </Suspense>

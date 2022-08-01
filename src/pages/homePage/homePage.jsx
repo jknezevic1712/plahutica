@@ -1,5 +1,8 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+import { blogsInitialDataLoad } from "../../redux/actions/blogs/blogActions";
+import { utilsInitialDataLoad } from "../../redux/actions/utils/utilsActions";
 
 import Header from "../../components/header/header";
 import HomepageDetails from "./features/homepageDetails/homepageDetails";
@@ -13,6 +16,7 @@ import PictureFour from "../../assets/images/blogImages/pictureFour.jpg";
 import PictureFive from "../../assets/images/blogImages/pictureFive.jpg";
 
 const HomePage = () => {
+  const dispatch = useDispatch();
   const activeBlogId = useSelector((state) => state.utils.activeBlogId);
 
   const imagesArray = [
@@ -22,6 +26,11 @@ const HomePage = () => {
     PictureFour,
     PictureFive,
   ];
+
+  useEffect(() => {
+    dispatch(blogsInitialDataLoad());
+    dispatch(utilsInitialDataLoad());
+  }, []);
 
   return (
     <div
