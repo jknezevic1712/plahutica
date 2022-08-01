@@ -7,12 +7,6 @@ import { utilsInitialDataLoad } from "./redux/actions/utils/utilsActions";
 
 import LoadingDots from "./components/loadingDots/loadingDots";
 
-import PictureOne from "./assets/images/blogImages/pictureOne.jpg";
-import PictureTwo from "./assets/images/blogImages/pictureTwo.jpg";
-import PictureThree from "./assets/images/blogImages/pictureThree.jpg";
-import PictureFour from "./assets/images/blogImages/pictureFour.jpg";
-import PictureFive from "./assets/images/blogImages/pictureFive.jpg";
-
 const HomePage = lazy(() => import("./pages/homePage/homePage"));
 const BlogPage = lazy(() => import("./pages/blogPage/blogPage"));
 
@@ -20,16 +14,6 @@ function App() {
   const activeBlogId = useSelector((state) => state.utils.activeBlogId);
   const loadInitialData = useSelector((state) => state.utils.loadInitialData);
   const dispatch = useDispatch();
-
-  console.log("ACTIVE BLOG => ", activeBlogId, ", BOOL => ", loadInitialData);
-
-  const imagesArray = [
-    PictureOne,
-    PictureTwo,
-    PictureThree,
-    PictureFour,
-    PictureFive,
-  ];
 
   useEffect(() => {
     if (loadInitialData) {
@@ -43,11 +27,8 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<LoadingDots />}>
           <Routes>
-            <Route path="/" element={<HomePage imagesArray={imagesArray} />} />
-            <Route
-              path="/blog"
-              element={<BlogPage imagesArray={imagesArray} />}
-            />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/blog" element={<BlogPage />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
