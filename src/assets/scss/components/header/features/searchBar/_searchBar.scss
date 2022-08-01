@@ -90,19 +90,19 @@
 @media screen and (min-width: $xl-breakpoint) {
   .search_bar {
     .search_bar-magnifier {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
     }
 
     .search_bar-input_field {
       width: 200px;
-      height: 40px;
+      height: 35px;
       top: 25%;
       left: 83%;
 
       &.show {
         width: 200px;
-        height: 40px;
+        height: 35px;
       }
     }
   }

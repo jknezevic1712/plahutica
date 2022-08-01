@@ -123,10 +123,11 @@
         .homepage-blog_scroll {
           img {
             border-radius: 50%;
-            border: 1px solid transparent;
-            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
 
             &:hover {
+              border: 2px solid $clr-bg;
               background-color: $clr-highlight;
             }
           }

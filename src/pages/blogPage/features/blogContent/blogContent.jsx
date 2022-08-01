@@ -1,18 +1,25 @@
 import React from "react";
 
-import { Istra_mini_road_trip } from "../../../../assets/blogsContent/istra_mini_road_trip";
+import { blogs } from "../../../../assets/blogs/blogs";
 
-const BlogContent = () => {
+const BlogContent = ({ currentBlogOverview, blogsNumber, imagesArray }) => {
+  let keyId = 0;
+
+  console.log("CURRENT BLOG => ", currentBlogOverview);
   return (
     <div className="blog_container">
-      {Object.entries(Istra_mini_road_trip).forEach(([key, value]) => (
-        <div className="blog_container-card">
-          <div className="blog_container-card_content">
-            <h1>{key}</h1>
-            <p>{value}</p>
+      {Object.entries(blogs[currentBlogOverview]).map((data) => {
+        keyId = keyId + 1;
+
+        return (
+          <div key={keyId} className="blog_container-card">
+            <div className="blog_container-card_content">
+              <h1>{data[0]}</h1>
+              <p>{data[1]}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
