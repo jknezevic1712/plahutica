@@ -17,8 +17,8 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<LoadingDots />}>
           <Routes>
-            <Route exact path="/" element={<HomePage />} />
-            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:activeBlogId" element={<BlogPage />} />
+            <Route path="/" element={<HomePage />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

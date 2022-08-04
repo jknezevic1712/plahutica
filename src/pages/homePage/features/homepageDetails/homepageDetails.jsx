@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const HomepageDetails = ({ activeBlogId }) => {
@@ -11,9 +12,9 @@ const HomepageDetails = ({ activeBlogId }) => {
       <div className="homepage-blog_details-content">
         <h1>{currentBlogOverview.title}</h1>
         <p>{currentBlogOverview.description}</p>
-        <a className="link_as_button" href="/blog">
+        <Link className="link_as_button" to={`/blog/${activeBlogId}`}>
           Read more...
-        </a>
+        </Link>
       </div>
     </div>
   );
