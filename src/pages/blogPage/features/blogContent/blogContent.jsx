@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const BlogContent = () => {
-  const activeBlogId = useSelector((state) => state.utils.activeBlogId);
-  // const { activeBlogId } = useParams();
+  // const activeBlogId = useSelector((state) => state.utils.activeBlogId);
+  const { activeBlogId } = useParams();
   const activeBlogContent = useSelector(
     (state) => state.blogs.data[activeBlogId].content
   );

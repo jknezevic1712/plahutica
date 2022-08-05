@@ -5,7 +5,7 @@ import SearchBar from "./features/searchBar/searchBar";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header bg-dark_transparent">
       <SideMenu />
       <h1>
         <a href="/">Plahutica</a>

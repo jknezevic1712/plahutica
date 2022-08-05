@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import MagnifierIcon from "../../../../assets/images/magnifier_icon_50.png";
+import MagnifierIcon from "../../../../assets/images/magnifier_icon_50-white.png";
 
 const SearchBar = () => {
   const [showInputField, setShowInputField] = useState(false);

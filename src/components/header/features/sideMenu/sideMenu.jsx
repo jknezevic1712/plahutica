@@ -7,7 +7,7 @@ const SideMenu = () => {
 
   return (
     <>
-      <HamburgerIcon isActive={isActive} setIsActive={setIsActive} />
+      <HamburgerIcon isActive={isActive} setIsActive={setIsActive} inHeader />
       <div className={`side_menu ${isActive ? "show" : ""}`}>
         <div className="side_menu-header">
           <HamburgerIcon isActive={isActive} setIsActive={setIsActive} />

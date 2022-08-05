@@ -32,6 +32,12 @@ $hamburger_icon_size: 25px;
     transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
     transform-origin: left;
   }
+
+  &.in_header {
+    .line {
+      background-color: $clr-bg;
+    }
+  }
 }
 
 .hamburger_icon.is_active {
