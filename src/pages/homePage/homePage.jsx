@@ -26,7 +26,7 @@ const HomePage = () => {
         backgroundImage: `url(${imagesArray[activeBlogId]})`,
       }}
     >
-      <Header />
+      <Header homepageView />
       <div className="homepage-content">
         <HomepageDetails activeBlogId={activeBlogId} />
         <div className="homepage-carousel">

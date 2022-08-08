@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 
-import MagnifierIcon from "../../../../assets/images/magnifier_icon_50-white.png";
+import MagnifierIconWhite from "../../../../assets/images/magnifier_icon_50-white.png";
+import MagnifierIconBlack from "../../../../assets/images/magnifier_icon_50-black.png";
 
-const SearchBar = () => {
-  const [showInputField, setShowInputField] = useState(false);
+const SearchBar = ({ homepageView }) => {
   const [searchText, setSearchText] = useState("");
-
-  const handleShowingInputField = () => {
-    setShowInputField(!showInputField);
-  };
 
   const handleSearchChange = (value) => {
     setSearchText(value);
@@ -16,21 +12,19 @@ const SearchBar = () => {
 
   return (
     <div className="search_bar">
-      <img
-        className="search_bar-magnifier"
-        src={MagnifierIcon}
-        alt=""
-        onClick={() => handleShowingInputField()}
+      <input
+        type="text"
+        className={`search_bar-input ${
+          homepageView ? "search_bar-input-white" : ""
+        }`}
+        placeholder="Search for a blog..."
+        style={{
+          backgroundImage: `url(
+            ${homepageView ? MagnifierIconWhite : MagnifierIconBlack}
+          )`,
+        }}
+        onChange={(e) => handleSearchChange(e.target.value)}
       />
-      <div className={`search_bar-input_field ${showInputField ? "show" : ""}`}>
-        <input
-          type="text"
-          placeholder="Type blog name..."
-          autoFocus
-          value={searchText}
-          onChange={(e) => handleSearchChange(e.target.value)}
-        />
-      </div>
     </div>
   );
 };

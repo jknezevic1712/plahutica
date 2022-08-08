@@ -2,12 +2,17 @@ import React, { useState } from "react";
 
 import HamburgerIcon from "../hamburgerIcon/hamburgerIcon";
 
-const SideMenu = () => {
+const SideMenu = ({ homepageView }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <>
-      <HamburgerIcon isActive={isActive} setIsActive={setIsActive} inHeader />
+      <HamburgerIcon
+        isActive={isActive}
+        setIsActive={setIsActive}
+        inHeader
+        homepageView={homepageView}
+      />
       <div className={`side_menu ${isActive ? "show" : ""}`}>
         <div className="side_menu-header">
           <HamburgerIcon isActive={isActive} setIsActive={setIsActive} />

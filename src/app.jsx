@@ -10,7 +10,7 @@ const BlogPage = lazy(() => import("./pages/blogPage/blogPage"));
 function App() {
   const activeBlogId = useSelector((state) => state.utils.activeBlogId);
 
-  console.log("ACTIVE BLOG => ", activeBlogId);
+  // console.log("ACTIVE BLOG => ", activeBlogId);
 
   return (
     <>

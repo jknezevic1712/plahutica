@@ -19,9 +19,38 @@ html {
   -webkit-text-size-adjust: 100%;
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-style: italic;
     color: $clr-highlight;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-style: italic;
+    color: #3d8d8f;
+    font-family: "Edu QLD Beginner", cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0.67em 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-family: "Edu QLD Beginner", cursive;
+    letter-spacing: 2px;
+    margin: 0.67em 0;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    font-family: "Edu QLD Beginner", cursive;
+    letter-spacing: 2px;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-family: "Edu QLD Beginner", cursive;
+    letter-spacing: 2px;
   }
 
   a,

@@ -10,7 +10,7 @@ const HomepageDetails = ({ activeBlogId }) => {
   return (
     <div className="homepage-blog_details">
       <div className="homepage-blog_details-content bg-dark_transparent">
-        <h1>{currentBlogOverview.title}</h1>
+        <h2>{currentBlogOverview.title}</h2>
         <p>{currentBlogOverview.description}</p>
         <Link className="link_as_button" to={`/blog/${activeBlogId}`}>
           Read more...

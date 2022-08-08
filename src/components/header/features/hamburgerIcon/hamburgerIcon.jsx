@@ -1,6 +1,6 @@
 import React from "react";
 
-const HamburgerIcon = ({ isActive, setIsActive, inHeader }) => {
+const HamburgerIcon = ({ isActive, setIsActive, inHeader, homepageView }) => {
   const isHamburgerActiveHandler = () => {
     setIsActive(!isActive);
   };
@@ -9,7 +9,7 @@ const HamburgerIcon = ({ isActive, setIsActive, inHeader }) => {
     <>
       <div
         className={`hamburger_icon ${isActive ? "is_active" : ""} ${
-          inHeader ? "in_header" : ""
+          inHeader && homepageView ? "in_header" : ""
         }`}
         onClick={() => isHamburgerActiveHandler()}
       >

@@ -41,23 +41,75 @@
         height: fit-content;
         width: 100%;
         padding: 2.5% 0;
-        border-bottom: 2px solid $clr-highlight;
+
+        &:not(:last-child) {
+          border-bottom: 2px solid $clr-highlight;
+        }
 
         .blog_container-card_content {
           height: 100%;
           width: 100%;
           display: grid;
-          place-items: center;
           text-align: justify;
           line-height: 1.5;
 
-          h1,
-          h2,
-          h3,
-          h4 {
-            justify-self: flex-start;
-            margin-bottom: 2.5%;
-            line-height: normal;
+          & > div {
+            padding: 2.5% 0;
+          }
+
+          .blog_container-card_content-inner {
+            width: 95%;
+            display: grid;
+            grid-template-columns: 15% 80%;
+            justify-self: flex-end;
+            align-items: center;
+            gap: 0 5%;
+            word-break: break-word;
+          }
+
+          .blog_container-card_content-excursions {
+            height: 100%;
+            width: 100%;
+
+            h3 {
+              font-size: 1.7rem;
+              text-align: center;
+            }
+
+            .blog_container-card_content-excursions-inner {
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              margin-bottom: 2.5%;
+
+              h4 {
+                width: fit-content;
+                margin-bottom: 2.5%;
+                border-bottom: 2px solid $clr-highlight;
+              }
+
+              p {
+                text-indent: 2rem;
+              }
+
+              .blog_container-card_content-excursions-inner_content {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                margin-bottom: 2.5%;
+
+                h5 {
+                  width: 100%;
+                  margin-bottom: 1%;
+                  text-indent: 2rem;
+                  font-size: 1.1rem;
+                }
+
+                p {
+                  text-indent: 4rem;
+                }
+              }
+            }
           }
         }
       }
